@@ -1,0 +1,18 @@
+{
+  "name": "@nextjs-lerna/shared",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Andreves Dickow <andreves_dickow_7@hotmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.9",
+    "dotenv": "^10.0.0",
+    "next-images": "^1.7.0",
+    "typescript": "^4.3.2"
+  }
+}
