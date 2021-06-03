@@ -9,9 +9,13 @@
     "start": "lerna run start --parallel",
     "start:frontend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope frontend --stream dev",
     "build:frontend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope frontend --stream build",
-    "run:build:frontend": "lerna run start --scope frontend"
+    "run:build:frontend": "lerna run start --scope frontend",
+    "start:backend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope backend --stream dev",
+    "build:backend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope backend --stream build",
+    "run:build:backend": "lerna run start --scope frontend"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": ["**/@adonisjs", "**/@adonisjs/**"]
+  }
 }
