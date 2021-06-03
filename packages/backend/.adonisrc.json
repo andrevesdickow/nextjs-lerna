@@ -3,7 +3,9 @@
   "commands": [
     "./commands",
     "@adonisjs/core/build/commands",
-    "@adonisjs/repl/build/commands"
+    "@adonisjs/repl/build/commands",
+    "@adonisjs/lucid/build/commands",
+    "@adonisjs/mail/build/commands"
   ],
   "exceptionHandlerNamespace": "App/Exceptions/Handler",
   "aliases": {
@@ -18,9 +20,15 @@
   ],
   "providers": [
     "./providers/AppProvider",
-    "@adonisjs/core"
+    "@adonisjs/core",
+    "@adonisjs/lucid",
+    "@adonisjs/auth",
+    "@adonisjs/mail"
   ],
   "aceProviders": [
     "@adonisjs/repl"
-  ]
+  ],
+  "namespaces": {
+    "httpControllers": "App/Controllers"
+  }
 }

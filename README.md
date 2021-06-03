@@ -37,7 +37,7 @@ PS: update **“main”** property.
     "@types/react": "^17.0.4",
     "dotenv": "^8.2.0",
     "next-images": "^1.7.0",
-    "typescript": "^4.2.4"
+    "typescript": "~4.2"
   }
 }
 ```

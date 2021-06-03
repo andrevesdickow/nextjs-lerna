@@ -12,10 +12,9 @@
     "run:build:frontend": "lerna run start --scope frontend",
     "start:backend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope backend --stream dev",
     "build:backend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope backend --stream build",
-    "run:build:backend": "lerna run start --scope frontend"
+    "run:build:backend": "lerna run start --scope backend"
   },
   "workspaces": {
-    "packages": ["packages/*"],
-    "nohoist": ["**/@adonisjs", "**/@adonisjs/**"]
+    "packages": ["packages/*"]
   }
 }

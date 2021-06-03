@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "plugin:adonis/typescriptApp"
+  ],
+  "rules": {
+    "space-before-function-paren": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
+    "no-console": [2, { "allow": ["log", "error", "groupCollapsed", "group"] }]
+  }
+}
