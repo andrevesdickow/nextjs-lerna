@@ -1,4 +1,4 @@
-# Lerna + Next.js
+# Lerna + Next.js + Adonis 5
 
 In this tutorial, we’ll be creating a monorepo for the Next.js project. Learn about Next.js. Using a monorepo structure for our app can be very advantageous. A monorepo structure makes it much easier to manage multiple dependent applications or packages.  
 
@@ -65,6 +65,9 @@ Now lets add scripts in package.json of root directory, Now the `package.json` l
     "start:frontend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope frontend --stream dev",
     "build:frontend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope frontend --stream build",
     "run:build:frontend": "lerna run start --scope frontend",
+    "start:backend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope backend --stream dev",
+    "build:backend": "node -r ./dotenv.config.js node_modules/.bin/lerna run --scope backend --stream build",
+    "run:build:backend": "lerna run start --scope backend"
   },
   "workspaces": [
     "packages/*"
@@ -224,5 +227,15 @@ export default function Home() {
 }
 ```
 
-🎉 We’ve successfully created our very own **monorepo** from scratch with typescript configuration using **Next.js** and **lerna**.
+Now let’s create adonis5 project inside packages folder.
+```bash
+cd packages && yarn create adonis-ts-app backend
+```
+
+We can now start our application using command:
+```bash
+yarn start:backend
+```
+
+🎉 We’ve successfully created our very own **monorepo** from scratch with typescript configuration using **Next.js**, **Adonis 5** and **lerna**.
 Happy coding. 💻
